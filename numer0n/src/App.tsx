@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React ,{Component} from 'react';
 import './App.css';
+import Title from './components/Title/Title';
+import { StatusEnum } from './config/Enums';
+import AppState from './models/StateTypes/AppState';
+import SingleMode from './components/SingleMode/SingleMode';
+import VSMode from './components/VSMode/VSMode';
 
-const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component <any,AppState>{
+ 
+  constructor(props:any){
+    super(props);
+    this.state ={status:StatusEnum.Stanby_Mode};
+  }
+  render() {
+    return (
+      <React.Fragment>
+      {(()=>{
+        if(this.state.status===StatusEnum.Stanby_Mode){
+          return <Title/>
+        }
+        else if(this.state.status===StatusEnum.Single_Mode){
+          return <SingleMode/>
+          // <SingleMode/>
+        }
+        else if(this.state.status===StatusEnum.VS_Mode){
+          return <VSMode/>
+          // <VSMode/>
+        }
+        else {
+          return <Title/>
+          // Error Page
+        }
+      })()}
+      </React.Fragment>
+    );
+  }
 }
-
 export default App;
