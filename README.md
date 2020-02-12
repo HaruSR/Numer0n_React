@@ -27,18 +27,33 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Deploy to Heroku
+
+### 1. Sign up for Heroku(https://signup.heroku.com/login).
+### 2. Create app on Heroku.
+   - Input app name.
+   - Choose region.
+   - Click "Create app" button.
+### 3. Change New app Settings.
+   - Add buildpack.
+     > "Settings">"Buildpacks">"Add buildpack">"Node js"
+### <div id = "deploy-to-heroku">4. Deploy to Heroku.</div>
+   - Connect to Github.
+     > "Deploy">"Deployment method">GitHub"
+   - Search your repository.
+   - Click "Connect" button.
+   - Download and install the Heroku CLI(https://devcenter.heroku.com/articles/heroku-cli).
+   - Open Console(Powershell) on your local enviroment.
+   - Input 3 command.
+    `heroku login`
+    `heroku git:clone -a "app name"`
+    `git push heroku master`
+    - You can view your app(https://**"app name"**.herokuapp.com/).
+### 5. If you met some error.
+   - you can input this command and restart <a href ="#deploy-to-heroku">"4. Deploy to Heroku"</a> 
