@@ -22,11 +22,9 @@ class App extends Component <any,AppState>{
         }
         else if(this.state.status===StatusEnum.Single_Mode){
           return <SingleMode/>
-          // <SingleMode/>
         }
         else if(this.state.status===StatusEnum.VS_Mode){
           return <VSMode/>
-          // <VSMode/>
         }
         else {
           return <Title/>

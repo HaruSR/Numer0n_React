@@ -1,6 +1,8 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
+import "./Title.scss";
 import TitleState from "../../models/StateTypes/TitleState";
 import { StatusEnum } from "../../config/Enums";
+
 
 
 const SINGLE_MODE: string = "SINGLE_MODE";
