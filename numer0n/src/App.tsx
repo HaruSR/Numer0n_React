@@ -11,13 +11,14 @@ class App extends Component <any,AppState>{
   constructor(props:any){
     super(props);
     this.state ={status:StatusEnum.Stanby_Mode};
+    this.UpdateStatus = this.UpdateStatus.bind(this);
   }
   render() {
     return (
       <React.Fragment>
       {(()=>{
         if(this.state.status===StatusEnum.Stanby_Mode){
-          return <Title/>
+          return <Title UpdateStatus={this.UpdateStatus}/>
         }
         else if(this.state.status===StatusEnum.Single_Mode){
           return <SingleMode/>
@@ -34,6 +35,10 @@ class App extends Component <any,AppState>{
       })()}
       </React.Fragment>
     );
+  }
+
+  UpdateStatus =(state:AppState)=>{
+    this.setState(state);
   }
 }
 export default App;
