@@ -1,0 +1,31 @@
+.container{
+    width:30%;
+    border-bottom:5px solid black;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+    perspective: 1000px;
+  }
+    .container div{
+      font-size: 3vw;
+      font-family: sans-serif;
+      transform-style: preserve-3d;
+      @for $i from 1 to 8 {
+        &:nth-child(#{$i}) {
+          animation: turn 3s infinite;
+          animation-delay: $i*200ms;
+        }
+      }
+    }
+  
+  @keyframes turn{
+    0% {
+      transform:rotateX(0deg);
+      transform-origin: 0 4vw;
+    }
+    100% {
+      transform:rotateX(360deg);
+      transform-origin: 0 4vw;
+    }
+  }
