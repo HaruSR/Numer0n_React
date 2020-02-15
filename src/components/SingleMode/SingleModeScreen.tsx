@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import SelectField from '../Share/SelectField'
+import SelectField from '../utils/SelectField'
 
-export class SingleMode extends Component {
+export class SingleModeScreen extends Component {
     render() {
         return (
             <div>
@@ -12,4 +12,4 @@ export class SingleMode extends Component {
     }
 }
 
-export default SingleMode
+export default SingleModeScreen

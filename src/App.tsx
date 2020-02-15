@@ -1,10 +1,10 @@
 import React ,{Component} from 'react';
 import './App.css';
-import Title from './components/Title/Title';
+import TitleScreen from './components/Title/TitleScreen';
 import { StatusEnum } from './config/Enums';
 import AppState from './models/StateTypes/AppState';
-import SingleMode from './components/SingleMode/SingleMode';
-import VSMode from './components/VSMode/VSMode';
+import SingleModeScreen from './components/SingleMode/SingleModeScreen';
+import VSModeScreen from './components/VSMode/VSModeScreen';
 
 class App extends Component <any,AppState>{
  
@@ -18,16 +18,16 @@ class App extends Component <any,AppState>{
       <React.Fragment>
       {(()=>{
         if(this.state.status===StatusEnum.Stanby_Mode){
-          return <Title UpdateStatus={this.UpdateStatus}/>
+          return <TitleScreen UpdateStatus={this.UpdateStatus}/>
         }
         else if(this.state.status===StatusEnum.Single_Mode){
-          return <SingleMode/>
+          return <SingleModeScreen/>
         }
         else if(this.state.status===StatusEnum.VS_Mode){
-          return <VSMode/>
+          return <VSModeScreen/>
         }
         else {
-          return <Title/>
+          return <TitleScreen/>
           // Error Page
         }
       })()}

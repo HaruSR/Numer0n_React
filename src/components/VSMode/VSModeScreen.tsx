@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class VSMode extends Component {
+export class VSModeScreen extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ export class VSMode extends Component {
     }
 }
 
-export default VSMode
+export default VSModeScreen
