@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import History from './History';
 import CallNumber from './CallNumber';
 import NumberField from './NumberField';
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles({
     wrapper: {
@@ -19,16 +20,16 @@ const useStyles = makeStyles({
 const SelectField = () => {
     const classes = useStyles();
     return (
-        <div className = {classes.wrapper}>
-            <div>
+        <Box className = {classes.wrapper}>
+            <Box>
                 <History/>
-            </div>
-            <div>
+            </Box>
+            <Box>
                 <CallNumber/>
                 <NumberField/>
-            </div>
+            </Box>
             
-        </div>
+        </Box>
     )
 }
 

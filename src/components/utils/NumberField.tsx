@@ -1,64 +1,63 @@
 import React from 'react'
-import { Grid, makeStyles } from '@material-ui/core' 
+import { Grid, Box, FormLabel ,makeStyles } from '@material-ui/core' 
 
 const useStyle = makeStyles({
     root: {
         flexGrow: 1,
-    },
-
+    }
 });
 
 const NumberField = () => {
     const classes = useStyle();
     return (
-        <div className = {classes.root}>
-            <Grid container spacing={1}>
-                <Grid container item xs={12} spacing={3}>
+        <Box className = {classes.root}>
+            <Grid container>
+                 <Grid container item xs={12}>{/*一行目 */}
                     <Grid item xs={4}>
-                        <label>1</label>
+                        <FormLabel>1</FormLabel>
                     </Grid>
                     <Grid item xs={4}>
-                        <label>2</label>
+                        <FormLabel>2</FormLabel>
                     </Grid>
                     <Grid item xs={4}>
-                        <label>3</label>
-                    </Grid>
-                </Grid>
-                <Grid container item xs={12} spacing={3}>
-                    <Grid item xs={4}>
-                        <label>4</label>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <label>5</label>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <label>6</label>
+                        <FormLabel>3</FormLabel>
                     </Grid>
                 </Grid>
-                <Grid container item xs={12} spacing={3}>
+                <Grid container item xs={12}>{/*二行目*/}
                     <Grid item xs={4}>
-                        <label>7</label>
+                        <FormLabel>4</FormLabel>
                     </Grid>
                     <Grid item xs={4}>
-                        <label>8</label>
+                        <FormLabel>5</FormLabel>
                     </Grid>
                     <Grid item xs={4}>
-                        <label>9</label>
+                        <FormLabel>6</FormLabel>
                     </Grid>
                 </Grid>
-                <Grid container item xs={12} spacing={3}>
+                <Grid container item xs={12}>
                     <Grid item xs={4}>
-                        <label></label>
+                        <FormLabel>7</FormLabel>
                     </Grid>
                     <Grid item xs={4}>
-                        <label>0</label>
+                        <FormLabel>8</FormLabel>
                     </Grid>
                     <Grid item xs={4}>
-                        <label></label>
+                        <FormLabel>9</FormLabel>
+                    </Grid>
+                </Grid>
+                <Grid container item xs={12}>
+                    <Grid item xs={4}>
+                        <FormLabel></FormLabel>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <FormLabel>0</FormLabel>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <FormLabel></FormLabel>
                     </Grid>
                 </Grid>
             </Grid>
-        </div>
+        </Box>
     )
 }
 

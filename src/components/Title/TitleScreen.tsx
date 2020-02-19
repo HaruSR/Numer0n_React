@@ -3,6 +3,7 @@ import "./Title.scss";
 import TitleState from "../../models/StateTypes/TitleState";
 import { StatusEnum } from "../../config/Enums";
 import  Title  from "../utils/Title";
+import { Box,Button } from "@material-ui/core";
 
 
 
@@ -33,11 +34,11 @@ export default class TitleScreen extends Component<any, TitleState>{
     render() {
         return (
             <React.Fragment>
-                <div className="background">
+                <Box className="background">
                 <Title/>
-                    <button className="single-mode" name={SINGLE_MODE} onClick={this.handleClick}>Single Mode</button>
-                    <button className="vs-mode" name={VS_MODE} onClick={this.handleClick}>VS Mode</button>
-                </div>
+                    <Button className="single-mode" name={SINGLE_MODE} onClick={this.handleClick} variant="contained">Single Mode</Button>
+                    <Button className="vs-mode" name={VS_MODE} onClick={this.handleClick} variant="contained">VS Mode</Button>
+                </Box>
             </React.Fragment>
         )
     }

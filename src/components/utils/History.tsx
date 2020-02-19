@@ -1,32 +1,33 @@
 import React from 'react'
+import { ListItem, List, Box, FormLabel } from '@material-ui/core'
 
 const History = () => {
     return (
         <React.Fragment>
             <title>History</title>
-            <ul>
-                <li>
-                    <div>
-                        <label>1</label>
-                        <label>012</label>
-                        <label>2h2b</label>
-                    </div>
-            </li>
-                <li>
-                    <div>
-                        <label>2</label>
-                        <label>012</label>
-                        <label>2h2b</label>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <label>3</label>
-                        <label>012</label>
-                        <label>2h2b</label>
-                    </div>
-                </li>
-            </ul>
+            <List>
+                <ListItem>
+                    <Box>
+                        <FormLabel>1</FormLabel>
+                        <FormLabel>012</FormLabel>
+                        <FormLabel>2h2b</FormLabel>
+                    </Box>
+            </ListItem>
+                <ListItem>
+                    <Box>
+                        <FormLabel>2</FormLabel>
+                        <FormLabel>012</FormLabel>
+                        <FormLabel>2h2b</FormLabel>
+                    </Box>
+                </ListItem>
+                <ListItem>
+                    <Box>
+                        <FormLabel>3</FormLabel>
+                        <FormLabel>012</FormLabel>
+                        <FormLabel>2h2b</FormLabel>
+                    </Box>
+                </ListItem>
+            </List>
         </React.Fragment>
     )
 }
