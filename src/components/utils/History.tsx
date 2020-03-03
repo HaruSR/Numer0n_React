@@ -3,8 +3,8 @@ import { ListItem, List, Box, FormLabel } from '@material-ui/core'
 
 const History = () => {
     return (
-        <React.Fragment>
-            <title>History</title>
+        <Box display='flex' flexDirection='column' height='100%' bgcolor='lightblue'>
+            <label>History</label>
             <List>
                 <ListItem>
                     <Box>
@@ -28,7 +28,7 @@ const History = () => {
                     </Box>
                 </ListItem>
             </List>
-        </React.Fragment>
+        </Box>
     )
 }
 

@@ -7,12 +7,20 @@ import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles({
     wrapper: {
-        height: 100,
-        window: 100,
+        height: '100%',
+        window: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        flexDirection: 'row',
+        backgroundColor: 'lightgreen',
         margin: 0
+    },
+    
+    historyContent: {
+        display: 'flex',
+        justifyContent: 'center',
+        height: '500'
     }
 });
   
@@ -21,14 +29,13 @@ const SelectField = () => {
     const classes = useStyles();
     return (
         <Box className = {classes.wrapper}>
-            <Box>
+            <Box width='30%' height='100%'>
                 <History/>
             </Box>
-            <Box>
+            <Box width='70%' height='100%' display='flex' flexDirection='column'>
                 <CallNumber/>
                 <NumberField/>
             </Box>
-            
         </Box>
     )
 }

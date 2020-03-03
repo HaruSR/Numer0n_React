@@ -5,8 +5,8 @@ import { Box } from '@material-ui/core'
 export class SingleModeScreen extends Component {
     render() {
         return (
-            <Box>
-                <title>SingleMode</title>
+            <Box height='100vh' display='flex' flexDirection='column'>
+                <label>SingleMode</label>
                 <SelectField/>
             </Box>   
         )
