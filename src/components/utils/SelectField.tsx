@@ -16,11 +16,20 @@ const useStyles = makeStyles({
         backgroundColor: 'lightgreen',
         margin: 0
     },
-    
     historyContent: {
         display: 'flex',
         justifyContent: 'center',
         height: '500'
+    },
+    left_content: {
+        width: '30%', 
+        height: '100%'
+    },
+    right_content: {
+        display: 'flex',
+        flexDirection: 'column',
+        width: '70%',
+        height: '100%'
     }
 });
   
@@ -29,10 +38,10 @@ const SelectField = () => {
     const classes = useStyles();
     return (
         <Box className = {classes.wrapper}>
-            <Box width='30%' height='100%'>
+            <Box className = {classes.left_content}>
                 <History/>
             </Box>
-            <Box width='70%' height='100%' display='flex' flexDirection='column'>
+            <Box className = {classes.right_content}>
                 <CallNumber/>
                 <NumberField/>
             </Box>

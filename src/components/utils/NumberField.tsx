@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Box, FormLabel ,makeStyles } from '@material-ui/core' 
+import { Grid, Box, Button ,makeStyles } from '@material-ui/core' 
 
 const useStyle = makeStyles({
     root: {
@@ -14,10 +14,13 @@ const useStyle = makeStyles({
         justifyContent: 'center',
         alignItems: 'center',
         height: '100%',
-        // borderColor: '',
-        // borderTopWidth: '0.2px',
-        // borderStyle: 'solid'
+        padding: '0.5rem',
     },
+    dialButton: { 
+        height: '100%',
+        width: '100%',
+        border: '1px solid gray',
+    }
 });
 
 const NumberField = () => {
@@ -27,46 +30,46 @@ const NumberField = () => {
             <Grid container>
                  <Grid container item xs={12}>
                     <Grid item xs={4} className={classes.numberDial} >
-                        <FormLabel>1</FormLabel>
+                        <Button className={classes.dialButton}>1</Button>
                     </Grid>
                     <Grid item xs={4} className={classes.numberDial}>
-                        <FormLabel>2</FormLabel>
+                        <Button className={classes.dialButton}>2</Button>
                     </Grid>
                     <Grid item xs={4} className={classes.numberDial}>
-                        <FormLabel>3</FormLabel>
-                    </Grid>
-                </Grid>
-                <Grid container item xs={12}>
-                    <Grid item xs={4} className={classes.numberDial}>
-                        <FormLabel>4</FormLabel>
-                    </Grid>
-                    <Grid item xs={4} className={classes.numberDial}>
-                        <FormLabel>5</FormLabel>
-                    </Grid>
-                    <Grid item xs={4} className={classes.numberDial}>
-                        <FormLabel>6</FormLabel>
+                        <Button className={classes.dialButton}>3</Button>
                     </Grid>
                 </Grid>
                 <Grid container item xs={12}>
                     <Grid item xs={4} className={classes.numberDial}>
-                        <FormLabel>7</FormLabel>
+                        <Button className={classes.dialButton}>4</Button>
                     </Grid>
                     <Grid item xs={4} className={classes.numberDial}>
-                        <FormLabel>8</FormLabel>
+                        <Button className={classes.dialButton}>5</Button>
                     </Grid>
                     <Grid item xs={4} className={classes.numberDial}>
-                        <FormLabel>9</FormLabel>
+                        <Button className={classes.dialButton}>6</Button>
                     </Grid>
                 </Grid>
                 <Grid container item xs={12}>
                     <Grid item xs={4} className={classes.numberDial}>
-                        <FormLabel></FormLabel>
+                        <Button className={classes.dialButton}>7</Button>
                     </Grid>
                     <Grid item xs={4} className={classes.numberDial}>
-                        <FormLabel>0</FormLabel>
+                        <Button className={classes.dialButton}>8</Button>
                     </Grid>
                     <Grid item xs={4} className={classes.numberDial}>
-                        <FormLabel></FormLabel>
+                        <Button className={classes.dialButton}>9</Button>
+                    </Grid>
+                </Grid>
+                <Grid container item xs={12}>
+                    <Grid item xs={4} className={classes.numberDial}>
+                        <Button className={classes.dialButton}></Button>
+                    </Grid>
+                    <Grid item xs={4} className={classes.numberDial}>
+                        <Button className={classes.dialButton}>0</Button>
+                    </Grid>
+                    <Grid item xs={4} className={classes.numberDial}>
+                        <Button className={classes.dialButton}></Button>
                     </Grid>
                 </Grid>
             </Grid>
